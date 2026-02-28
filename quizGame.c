@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main() {
     char questions[][100] = {
@@ -29,7 +30,7 @@ int main() {
         , questions[i], options[i]);
         scanf(" %c", &userChoice);
         
-        if (userChoice == answerKeys[i]) {
+        if (toupper(userChoice) == answerKeys[i]) {
             printf("\nCORRECT!\n");
             points++;
         } else {
